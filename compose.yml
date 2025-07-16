@@ -3,8 +3,10 @@ services:
     build:
       context: server
     ports:
-#      - "53:5335"
-      - "5335:5335"
+#      - "53:5335/tcp"
+#      - "53:5335/udp"
+      - "5335:5335/tcp"
+      - "5335:5335/udp"
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-yourdns}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-unsecure}

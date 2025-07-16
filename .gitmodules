@@ -1,0 +1,6 @@
+[submodule "server"]
+	path = server
+	url = https://github.com/Milk-Cool/yourdns-server.git
+[submodule "website"]
+	path = website
+	url = https://github.com/Milk-Cool/yourdns-website.git

@@ -12,6 +12,7 @@ services:
       ADMIN_KEY: ${ADMIN_KEY:-unsecure}
       DEFAULT_SERVER: ${DEFAULT_SERVER:-1.1.1.1}
       POSTGRES_HOST: postgres
+    restart: always
     env_file: .env
     depends_on:
       postgres:
@@ -36,6 +37,7 @@ services:
       YOURDNS_KEY: ${ADMIN_KEY:-unsecure}
       DNS_IP: ${DNS_IP:-127.0.0.1}
       DNS_DOH_HOST: ${DNS_DOH_HOST:-localhost}
+    restart: always
     env_file: .env
     depends_on:
       server:

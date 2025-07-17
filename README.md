@@ -15,6 +15,19 @@ DNS_IP=YourOutsideIP # e. g. 123.45.67.89
 DNS_DOH_HOST=YourOutsideDomain # e. g. yourdns.com
 ```
 
+## DoH
+Not included. I recommend balboah's coredns fork on the [doh-json](https://github.com/balboah/coredns/tree/doh-json) branch.
+
+Config:
+```
+https://.:8044 {
+	tls ssl.pem ssl.key
+	forward . dns://127.0.0.1:53 {
+		prefer_udp
+	}
+}
+```
+
 ## running
 ```bash
 docker-compose up
